@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let titulo = document.createElement("h1")
+      titulo.innerText = "Exercício 5.2 - JavaScript DOM"
+      titulo.className = "title"
+      document.querySelector("body").appendChild(titulo)
+      let div1 = document.createElement("div")
+      div1.className = "main-content"
+      document.querySelector("body").appendChild(div1)
+      let div2 = document.createElement("div")
+      div2.className = "center-content"
+      document.querySelector("div").appendChild(div2)
+      let paragrafo1 = document.createElement("p")
+      paragrafo1.innerText = "Mano, sempre pedem isso, eu sinceramente não sei o que colocar KKKKKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKK"
+      document.getElementsByClassName("center-content")[0].appendChild(paragrafo1)
+      let esquerda = document.createElement("div")
+      esquerda.className = "left-content"
+      document.querySelector("div").appendChild(esquerda)
+      let direita = document.createElement("div")
+      direita.className = "right-content"
+      document.querySelector("div").appendChild(direita)
+      let img = document.createElement("img")
+      img.src = "https://picsum.photos/200"
+      img.className = "small-image"
+      document.getElementsByClassName("left-content")[0].appendChild(img)
+      let list = document.createElement("ul")
+      document.getElementsByClassName("right-content")[0].appendChild(list)
+      for (let i = 1; i <= 10; i += 1) {
+        let elemento = document.createElement("li")
+        elemento.innerText = i
+        document.querySelector("ul").appendChild(elemento)
+      }
+      for (let i = 0; i < 3; i += 1){
+        titulinho = document.createElement("h3")
+        titulinho.className = "description"
+        document.getElementsByClassName("main-content")[0].appendChild(titulinho)
+      }
+      document.querySelector("div").removeChild(esquerda)
+      document.getElementsByClassName("right-content")[0].style.marginRight = "auto"
+      document.getElementsByClassName("center-content")[0].parentElement.style.backgroundColor = "lightblue"
+      for (let i = 0; i < 2; i += 1) {
+        lastElement = document.querySelector("ul").lastElementChild
+        document.querySelector("ul").removeChild(lastElement)
+      }
+
+    </script>
+  </body>
+</html>
