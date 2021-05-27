@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+  <script>
+    //1 - document.querySelector("div").firstElementChild.children[1]
+    document.querySelector("div").firstElementChild.children[1].parentNode.style.color = "red"
+    document.querySelector("div").firstElementChild.children[1].firstElementChild.innerText = "Cala a boca"
+    //4 - document.getElementById("pai").firstElementChild
+    //5 - document.getElementById("elementoOndeVoceEsta").previousElementSibling
+    //6 - document.getElementById("elementoOndeVoceEsta").nextSibling
+    //7 - document.getElementById("elementoOndeVoceEsta").nextElementSibling
+    //8 - document.getElementById("pai").children[2]
+    document.getElementById("elementoOndeVoceEsta").parentElement.appendChild(document.createElement("div"))
+    document.getElementById("elementoOndeVoceEsta").appendChild(document.createElement("div"))
+    document.getElementById("primeiroFilhoDoFilho").appendChild(document.createElement("div"))
+    //4 - document.getElementById("primeiroFilhoDoFilho").firstElementChild
+    elementos = document.querySelectorAll("#pai div")
+    for (i = 0; i < elementos.length; i += 1) {
+      elemento = elementos[i]
+      if (i != 1) {
+        elementos.removeChild(elemento)
+      }
+    }
+  </script>
+</body>
+</html>

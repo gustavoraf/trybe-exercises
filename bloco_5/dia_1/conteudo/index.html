@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title" class="titulos">Título</h2>
+    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle" class="titulos">Subtítulo</h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.querySelector("#page-title").innerText = "pantoprazol"
+      document.querySelector("#second-paragraph").innerText = "Eu não sou criativo desculpe-me"
+      document.querySelector("#subtitle").innerText = "Tenho que alterar"
+      document.querySelectorAll(".titulos")[0].style.color = "blue"
+      document.querySelectorAll("h4")[0].style.color = "green"
+
+    </script>
+  </body>
+</html>
