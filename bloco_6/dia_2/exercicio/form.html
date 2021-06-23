@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <label for="name">Nome:    
+        <input type="text" name="Nome" id="name" maxlength="40" required>
+      </label><br><br>
+      <label for="email">Email:   
+        <input type="email" name="E-mail" id="email" maxlength="50" required>
+      </label><br><br>
+      <label for="cpf">CPF:     
+        <input type="text" name="CPF" id="cpf" maxlength="11" required>
+      </label><br><br>
+      <label for="adress">Endereço:
+        <input type="text" name="Engereço" id="adress" maxlength="200" required>
+      </label><br><br>
+      <label for="city">Cidade: 
+        <input type="text" name="cidade" id="city" maxlength="28" required>
+      </label><br><br>
+      <label for="state">Estado:
+        <select name="estado" id="state" required>
+        </select>
+      </label><br><br>
+      <label for="home-type1">Tipo de residência: <br>
+        <input type="radio" name="residencia" id="home-type1" value="house">Casa
+      </label><br>
+      <label for="home-type2">
+        <input type="radio" name="residencia" id="home-type2" value="apartment">Apartamento
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="sumary">Resumo do Currículo:</label>
+      <textarea name="resumo-do-curriulo" id="sumary" cols=90% rows="10" maxlength="1000" required></textarea><br><br>
+      <label for="role">Cargo:</label>
+      <input type="text" name="cargo" id="role" maxlength="40" required>
+      <label for="role-descr">Descrição do Cargo:</label>
+      <input type="text" name="descrição-cargo" id="role-descr" maxlength="500" required><br><br>
+      <label for="start-date">Data de Início:</label>
+      <input type="date" name="data-inicio" id="start-date" required>
+    </fieldset>
+    <button type="submit" id="send">Enviar</button>
+  </form>
+  <script src="script.js">
+  </script>
+</body>
+</html>
